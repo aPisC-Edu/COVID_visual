@@ -1,0 +1,34 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "column_mappings" : { 
+                "province": "Province/State",
+                "region": "Country/Region",
+                "last_update": "Last Update",
+                "confirmed": "Confirmed",
+                "suspected": "Suspected",
+                "recovered": "Recovered",
+                "death": "Death"
+            },
+            "import_settings" : { 
+                "import_columns" : [ 
+                    "province",
+                    "region",
+                    "last_update",
+                    "confirmed",
+                    "suspected",
+                    "recovered",
+                    "death"
+                ], 
+                "include_filter" : [], 
+                "exclude_filter" : []
+            },
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": false },
+                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200127.csv"
+            },
+            "target_table" : "envduv_COVID_visual.db.data::Covid"  
+        }
+    ]
+}
