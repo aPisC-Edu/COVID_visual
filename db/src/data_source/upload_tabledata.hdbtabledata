@@ -20,9 +20,7 @@
                     "suspected",
                     "recovered",
                     "death"
-                ], 
-                "include_filter" : [], 
-                "exclude_filter" : []
+                ]
             },
             "source_data" : {
                 "data_type" : "CSV", 
@@ -52,9 +50,7 @@
                     "suspected",
                     "recovered",
                     "death"
-                ], 
-                "include_filter" : [], 
-                "exclude_filter" : []
+                ]
             },
             "source_data" : {
                 "data_type" : "CSV", 
