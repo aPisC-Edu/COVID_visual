@@ -1,7 +1,7 @@
-column table "envduv_COVID_visual.db.data::Covid" (
+column table "envduv_COVID_visual.db.data::Covid_raw" (
     "province"    VARCHAR(256)	CS_STRING,
     "region"      VARCHAR(256)	CS_STRING,
-    "last_update" DATE CS_DAYDATE,
+    "last_update" TIMESTAMP CS_LONGDATE,
     "confirmed"   DOUBLE CS_DOUBLE,
     "suspected"   DOUBLE CS_DOUBLE,
     "recovered"   DOUBLE CS_DOUBLE,
