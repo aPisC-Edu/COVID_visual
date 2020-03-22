@@ -9,18 +9,22 @@
                 "confirmed": "Confirmed",
                 "suspected": "Suspected",
                 "recovered": "Recovered",
-                "death": "Death"
+                "death": "Death",
+                "source_id": { "type": "constant", "value": "1" }
             },
-            "import_settings" : { 
-                "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death"
-                ]
+            "include_filter":{
+	            "import_settings" : { 
+	                "import_columns" : [ 
+	                    "province",
+	                    "region",
+	                    "last_update",
+	                    "confirmed",
+	                    "suspected",
+	                    "recovered",
+	                    "death",
+	                    "source_id"
+	                ]
+	            }
             },
             "source_data" : {
                 "data_type" : "CSV", 
@@ -39,25 +43,29 @@
                 "confirmed": "Confirmed",
                 "suspected": "Suspected",
                 "recovered": "Recovered",
-                "death": "Death"
+                "death": "Death",
+                "source_id": { "type": "constant", "value": "2" }
             },
-            "import_settings" : { 
-                "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death"
-                ]
+            "include_filter":{
+	            "import_settings" : { 
+	                "import_columns" : [ 
+	                    "province",
+	                    "region",
+	                    "last_update",
+	                    "confirmed",
+	                    "suspected",
+	                    "recovered",
+	                    "death",
+	                    "source_id"
+	                ]
+	            }
             },
             "source_data" : {
                 "data_type" : "CSV", 
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ",", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200128.csv"
+                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200127.csv"
             },
             "target_table" : "envduv_COVID_visual.db.data::Covid"  
         }

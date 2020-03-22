@@ -5,6 +5,7 @@ column table "envduv_COVID_visual.db.data::Covid" (
     "confirmed"   DOUBLE CS_DOUBLE,
     "suspected"   DOUBLE CS_DOUBLE,
     "recovered"   DOUBLE CS_DOUBLE,
-    "death"       DOUBLE CS_DOUBLE
+    "death"       DOUBLE CS_DOUBLE,
+    "source_id"   INTEGER CS_INT
 );
 
