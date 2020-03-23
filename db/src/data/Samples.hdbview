@@ -1,0 +1,4 @@
+VIEW "envduv_COVID_visual.db.data::Samples" 
+AS SELECT DISTINCT "timestamp", "region", "province"
+FROM "envduv_COVID_visual.db.data::Provinces", "envduv_COVID_visual.db.data::TimeStamps" 
+order by "region", "province", "timestamp" ;

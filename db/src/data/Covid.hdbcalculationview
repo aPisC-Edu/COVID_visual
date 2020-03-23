@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="envduv_COVID_visual.db.data::Covid" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Covid"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="envduv_COVID_visual.db.data::Covid_raw">
+    <resourceUri>envduv_COVID_visual.db.data::Covid_raw</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="envduv_COVID_visual.db.data::Covid_raw">
+  <attributes>
+    <attribute id="province" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="province"/>
+      <keyMapping columnObjectName="Covid_raw" columnName="province"/>
+    </attribute>
+    <attribute id="region" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="region"/>
+      <keyMapping columnObjectName="Covid_raw" columnName="region"/>
+    </attribute>
+    <attribute id="last_update" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="last_update"/>
+      <keyMapping columnObjectName="Covid_raw" columnName="last_update"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="confirmed" order="4" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="confirmed"/>
+      <measureMapping columnObjectName="Covid_raw" columnName="confirmed"/>
+    </measure>
+    <measure id="suspected" order="5" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="suspected"/>
+      <measureMapping columnObjectName="Covid_raw" columnName="suspected"/>
+    </measure>
+    <measure id="recovered" order="6" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="recovered"/>
+      <measureMapping columnObjectName="Covid_raw" columnName="recovered"/>
+    </measure>
+    <measure id="death" order="7" aggregationType="max" measureType="simple">
+      <descriptions defaultDescription="death"/>
+      <measureMapping columnObjectName="Covid_raw" columnName="death"/>
+    </measure>
+    <measure id="source_id" order="8" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="source_id"/>
+      <measureMapping columnObjectName="Covid_raw" columnName="source_id"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

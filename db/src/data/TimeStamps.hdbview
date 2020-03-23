@@ -1,0 +1,7 @@
+VIEW "envduv_COVID_visual.db.data::TimeStamps" 
+AS SELECT DISTINCT to_timestamp(
+	to_varchar(to_date("last_update")) 
+	|| ' ' 
+	|| to_varchar(floor(hour("last_update")/6) * 6)
+) as "timestamp"
+FROM "envduv_COVID_visual.db.data::Covid_raw" order by "timestamp";

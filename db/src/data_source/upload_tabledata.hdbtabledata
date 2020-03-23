@@ -29,7 +29,7 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nC0v_20200121_20200126.csv"
+                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200126.csv"
             },
             "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
         },

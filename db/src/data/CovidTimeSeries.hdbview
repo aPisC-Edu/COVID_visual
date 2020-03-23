@@ -1,0 +1,16 @@
+VIEW "envduv_COVID_visual.db.data::CovidTimeSeries" AS
+SELECT DISTINCT
+	s."region", 
+	s."province",
+	s."timestamp", 
+	first_value( d."last_update") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc) as "last_update",
+	first_value( d."confirmed") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc) as "confirmed",
+	first_value( d."suspected") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc) as "suspected",
+	first_value( d."recovered") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc) as "recovered",
+	first_value( d."death") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc) as "death"
+FROM "envduv_COVID_visual.db.data::Samples" as s left outer join "envduv_COVID_visual.db.data::Covid_raw" d
+on 
+	(s."region" = d."region" or (s."region" is null and d."region" is null)) and 
+	(s."province" = d."province" or (s."province" is null and d."province" is null)) and 
+	s."timestamp" >= d."last_update"
+order by s."province"
