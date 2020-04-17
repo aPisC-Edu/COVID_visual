@@ -1,0 +1,12 @@
+{
+	"role":{
+		"name": "envduv_COVID_visual.db.data::CovidRole",
+		"object_privileges":[  
+			{  
+				"name":"envduv_COVID_visual.db.data::CovidTimeSeries",
+				"type":"VIEW",
+				"privileges":[ "SELECT" ]
+		    }
+		 ]
+	}
+}

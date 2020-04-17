@@ -11,6 +11,9 @@ modules:
 
 resources:
  - name: hdi_db
+   parameters:
+      config:
+         schema: ENVDUV_COVID
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
