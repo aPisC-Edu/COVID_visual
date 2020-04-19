@@ -29,9 +29,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200126.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200126.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -61,9 +61,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200127.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200127.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -93,9 +93,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200128.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200128.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -125,9 +125,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200130.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200130.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -157,9 +157,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200131.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200131.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -189,9 +189,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200201.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200201.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -221,9 +221,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200205.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200205.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
@@ -253,9 +253,9 @@
                 "has_header" : true, 
                 "dialect" : "HANA", 
                 "type_config" : { "delimiter" : ";", "do_quote": false },
-                "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200206.csv"
+                "file_name" : "COVID_visual.db.data_source::2019_nCoV_20200121_20200206.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
         }
     ]
 }
