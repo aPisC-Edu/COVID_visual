@@ -1,11 +1,11 @@
 {
 	"role":{
-		"name": "envduv_COVID_visual.db.data::CovidRole",
-		"object_privileges":[  
+		"name": "envduv_COVID_visual.db.data::CovidRole#",
+		"schema_privileges":[  
 			{  
-				"name":"envduv_COVID_visual.db.data::CovidTimeSeries",
-				"type":"VIEW",
-				"privileges":[ "SELECT" ]
+				"reference": "ENVDUV_COVID",
+				"privileges":[ "SELECT" ],
+				"privileges_with_grant_option": ["INSERT"]
 		    }
 		 ]
 	}

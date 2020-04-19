@@ -1,16 +1,16 @@
-VIEW "envduv_COVID_visual.db.data::CovidTimeSeries" AS
+VIEW "envduv_COVID_visual.db.data::COVIDTIMESERIES" AS
 SELECT DISTINCT
-	s."region", 
-	s."province",
-	s."timestamp", 
-	first_value( d."last_update") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc, d."confirmed" desc) as "last_update",
-	first_value( d."confirmed") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc, d."confirmed" desc) as "confirmed",
-	first_value( d."suspected") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc, d."confirmed" desc) as "suspected",
-	first_value( d."recovered") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc, d."confirmed" desc) as "recovered",
-	first_value( d."death") over (partition by s."region", s."province", s."timestamp" order by d."last_update" desc, d."confirmed" desc) as "death"
-FROM "envduv_COVID_visual.db.data::Samples" as s left outer join "envduv_COVID_visual.db.data::Covid_raw" d
+	s."REGION", 
+	s."PROVINCE",
+	s."MEASURE_TS", 
+	first_value( d."LAST_UPDATE") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "LAST_UPDATE",
+	first_value( d."CONFIRMED") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "CONFIRMED",
+	first_value( d."SUSPECTED") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "SUSPECTED",
+	first_value( d."RECOVERED") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "RECOVERED",
+	first_value( d."DEATH") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "DEATH"
+FROM "envduv_COVID_visual.db.data::SAMPLES" as s left outer join "envduv_COVID_visual.db.data::COVID_RAW" d
 on 
-	(s."region" = d."region" or (s."region" is null and d."region" is null)) and 
-	(s."province" = d."province" or (s."province" is null and d."province" is null)) and 
-	(s."timestamp" >= d."last_update" or d."last_update" is null)
-order by s."province"
+	(s."REGION" = d."REGION" or (s."REGION" is null and d."REGION" is null)) and 
+	(s."PROVINCE" = d."PROVINCE" or (s."PROVINCE" is null and d."PROVINCE" is null)) and 
+	(s."MEASURE_TS" >= d."LAST_UPDATE" or d."LAST_UPDATE" is null)
+order by s."PROVINCE"

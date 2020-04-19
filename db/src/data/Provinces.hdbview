@@ -1,4 +1,4 @@
-VIEW "envduv_COVID_visual.db.data::Provinces" 
-AS SELECT DISTINCT "region", "province" 
-FROM "envduv_COVID_visual.db.data::Covid_raw"
-order by "region", "province";
+VIEW "envduv_COVID_visual.db.data::PROVINCES" 
+AS SELECT DISTINCT "REGION", "PROVINCE" 
+FROM "envduv_COVID_visual.db.data::COVID_RAW"
+order by "REGION", "PROVINCE";

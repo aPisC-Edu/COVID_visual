@@ -3,25 +3,25 @@
     "imports": [
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "1" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "1" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -31,29 +31,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200126.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "2" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "2" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -63,29 +63,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200127.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "3" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "3" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -95,29 +95,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200128.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "5" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "5" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -127,29 +127,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200130.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "6" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "6" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -159,29 +159,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200131.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "7" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "7" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -191,29 +191,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200201.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "11" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "11" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -223,29 +223,29 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200205.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         },
         {
             "column_mappings" : { 
-                "province": "Province/State",
-                "region": "Country/Region",
-                "last_update": "Last Update",
-                "confirmed": "Confirmed",
-                "suspected": "Suspected",
-                "recovered": "Recovered",
-                "death": "Death",
-                "source_id": { "type": "constant", "value": "12" }
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
+                "SUSPECTED": "Suspected",
+                "RECOVERED": "Recovered",
+                "DEATH": "Death",
+                "SOURCE_ID": { "type": "constant", "value": "12" }
             },
             "import_settings" : { 
                 "import_columns" : [ 
-                    "province",
-                    "region",
-                    "last_update",
-                    "confirmed",
-                    "suspected",
-                    "recovered",
-                    "death",
-                    "source_id"
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "SUSPECTED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
                 ]
             },
             "source_data" : {
@@ -255,7 +255,7 @@
                 "type_config" : { "delimiter" : ";", "do_quote": false },
                 "file_name" : "envduv_COVID_visual.db.data_source::2019_nCoV_20200121_20200206.csv"
             },
-            "target_table" : "envduv_COVID_visual.db.data::Covid_raw"  
+            "target_table" : "envduv_COVID_visual.db.data::COVID_RAW"  
         }
     ]
 }
