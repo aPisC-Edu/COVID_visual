@@ -1,4 +1,4 @@
-column table "envduv_COVID_visual.db.data::COVID_RESULT" (
+column table "COVID_visual.db.data::COVID_RESULT" (
     PROVINCE    VARCHAR(256)	CS_STRING,
     REGION      VARCHAR(256)	CS_STRING,
     MEASURE_TS TIMESTAMP CS_LONGDATE,

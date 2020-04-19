@@ -1,5 +1,5 @@
 { 
-  "envduv_COVID_visual.db.data::CovidRole#":{ 
+  "COVID_visual.db.data::CovidRole#":{ 
     "ENVDUV_COVID":{ 
       "schema":"ENVDUV_COVID" 
     }

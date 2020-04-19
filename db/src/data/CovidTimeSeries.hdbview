@@ -1,4 +1,4 @@
-VIEW "envduv_COVID_visual.db.data::COVIDTIMESERIES" AS
+VIEW "COVID_visual.db.data::COVIDTIMESERIES" AS
 SELECT DISTINCT
 	s."REGION", 
 	s."PROVINCE",
@@ -8,7 +8,7 @@ SELECT DISTINCT
 	first_value( d."SUSPECTED") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "SUSPECTED",
 	first_value( d."RECOVERED") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "RECOVERED",
 	first_value( d."DEATH") over (partition by s."REGION", s."PROVINCE", s."MEASURE_TS" order by d."LAST_UPDATE" desc, d."CONFIRMED" desc) as "DEATH"
-FROM "envduv_COVID_visual.db.data::SAMPLES" as s left outer join "envduv_COVID_visual.db.data::COVID_RAW" d
+FROM "COVID_visual.db.data::SAMPLES" as s left outer join "COVID_visual.db.data::COVID_RAW" d
 on 
 	(s."REGION" = d."REGION" or (s."REGION" is null and d."REGION" is null)) and 
 	(s."PROVINCE" = d."PROVINCE" or (s."PROVINCE" is null and d."PROVINCE" is null)) and 

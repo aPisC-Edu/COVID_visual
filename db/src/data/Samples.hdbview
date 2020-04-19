@@ -1,4 +1,4 @@
-VIEW "envduv_COVID_visual.db.data::SAMPLES" 
+VIEW "COVID_visual.db.data::SAMPLES" 
 AS SELECT DISTINCT "MEASURE_TS", "REGION", "PROVINCE"
-FROM "envduv_COVID_visual.db.data::PROVINCES", "envduv_COVID_visual.db.data::TIMESTAMPS" 
+FROM "COVID_visual.db.data::PROVINCES", "COVID_visual.db.data::TIMESTAMPS" 
 order by "REGION", "PROVINCE", "MEASURE_TS" ;
