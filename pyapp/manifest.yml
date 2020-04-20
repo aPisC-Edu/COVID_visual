@@ -1,5 +1,0 @@
-applications:
- - name: pyapp
-   host: pyapp
-   path: .
-   command: python server.py	
