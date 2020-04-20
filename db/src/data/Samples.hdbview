@@ -1,4 +1,0 @@
-VIEW "COVID_visual.db.data::SAMPLES" 
-AS SELECT DISTINCT "MEASURE_TS", "REGION", "PROVINCE"
-FROM "COVID_visual.db.data::PROVINCES", "COVID_visual.db.data::TIMESTAMPS" 
-order by "REGION", "PROVINCE", "MEASURE_TS" ;

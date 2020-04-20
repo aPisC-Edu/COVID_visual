@@ -1,4 +1,0 @@
-VIEW "COVID_visual.db.data::PROVINCES" 
-AS SELECT DISTINCT "REGION", "PROVINCE" 
-FROM "COVID_visual.db.data::COVID_RAW"
-order by "REGION", "PROVINCE";
