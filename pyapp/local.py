@@ -39,12 +39,11 @@ import pmdarima as pm
 from pmdarima.model_selection import train_test_split
 
 # Load/split your data
-# y = pm.datasets.load_wineind()
 y = n["f1"]
-train, test = train_test_split(y, train_size=25)
+train, test = train_test_split(y, train_size=20)
 
 # Fit your model
-model = pm.auto_arima(train, seasonal=True, m=3)
+model = pm.auto_arima(train, seasonal=True, m=5)
 
 # make your forecasts
 forecasts = model.predict(test.shape[0])  # predict N steps into the future
@@ -52,5 +51,5 @@ forecasts = model.predict(test.shape[0])  # predict N steps into the future
 # Visualize the forecasts (blue=train, green=forecasts)
 x = np.arange(y.shape[0])
 plt.plot(np.arange(y.shape[0]), y, c='blue')
-plt.plot(x[25:], forecasts, c='green')
+plt.plot(x[20:], forecasts, c='green')
 plt.show()
