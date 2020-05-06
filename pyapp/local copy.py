@@ -3,6 +3,7 @@ import sys
 from hdbcli import dbapi
 import numpy as np
 import matplotlib
+import math
 import matplotlib.pyplot as plt
 
 
@@ -35,21 +36,23 @@ n = np.array([tuple(i) for i in res], np.dtype([
 #plt.show()
 
 
-import pmdarima as pm
-from pmdarima.model_selection import train_test_split
 
 # Load/split your data
 y = n["f1"]
+x = np.arange(y.shape[0])
+y2 = np.log(y)
+y3 = -y2
 #train, test = train_test_split(y, train_size=20)
 
 # Fit your model
-model = pm.auto_arima(y, seasonal=True, m=1)
+p1 = np.polyfit(x, y, 1) # for linear fitting
+p2 = np.polyfit(x, y2, 1) # for exponential fitting
+p3 = np.polyfit(x, y3, 2) # for gauss fitting
 
-# make your forecasts
-forecasts = model.predict(y.shape[0])  # predict N steps into the future
 
 # Visualize the forecasts (blue=train, green=forecasts)
-x = np.arange(y.shape[0])
 plt.plot(x, y, c='green')
-plt.plot(np.arange(2*y.shape[0])[y.shape[0]:], forecasts, c='blue')
+plt.plot(x, p1[0] * x + p1[1], c='blue') # linear
+plt.plot(x, math.exp(p2[1]) * np.exp(x * p2[0]) , c='blue') # exponential
+plt.plot(x, math.exp(p3[2]) * np.exp(-x^2 * p3[0] - x*p3[1]), c='blue') # gauss
 plt.show()
