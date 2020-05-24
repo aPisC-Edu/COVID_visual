@@ -7,6 +7,36 @@
                 "REGION": "Country/Region",
                 "LAST_UPDATE": "Last Update",
                 "CONFIRMED": "Confirmed",
+                "RECOVERED": "Recovered",
+                "DEATH": "Deaths",
+                "SOURCE_ID": { "type": "constant", "value": "0" }
+            },
+            "import_settings" : { 
+                "import_columns" : [ 
+                    "PROVINCE",
+                    "REGION",
+                    "LAST_UPDATE",
+                    "CONFIRMED",
+                    "RECOVERED",
+                    "DEATH",
+                    "SOURCE_ID"
+                ]
+            },
+            "source_data" : {
+                "data_type" : "CSV", 
+                "has_header" : true, 
+                "dialect" : "HANA", 
+                "type_config" : { "delimiter" : ";", "do_quote": false },
+                "file_name" : "COVID_visual.db.data_source::covid_19_data.csv"
+            },
+            "target_table" : "COVID_visual.db.data::COVID_RAW"  
+        },
+        {
+            "column_mappings" : { 
+                "PROVINCE": "Province/State",
+                "REGION": "Country/Region",
+                "LAST_UPDATE": "Last Update",
+                "CONFIRMED": "Confirmed",
                 "SUSPECTED": "Suspected",
                 "RECOVERED": "Recovered",
                 "DEATH": "Death",
