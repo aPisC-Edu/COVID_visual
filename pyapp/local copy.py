@@ -48,10 +48,12 @@ y3 = -y2
 p1 = np.polyfit(x, y, 1) # for linear fitting
 p2 = np.polyfit(x, y2, 1) # for exponential fitting
 p3 = np.polyfit(x, y2, 2)
+p4 = np.polyfit(x, y2, 4)
 
 # Visualize the forecasts (blue=train, green=forecasts)
 #plt.plot(x, y2)
 #plt.plot(x, np.polyval(p3, x))
+#plt.plot(x, np.polyval(p4, x))
 #plt.show()
 
 
@@ -65,4 +67,5 @@ gb = -p3[1]/ (2*p3[0])
 ga = math.exp(p3[2] - p3[1] * p3[1] / (4 * p3[0]) )
 
 plt.plot(x, ga * np.exp(np.power(x - gb, 2) * gc )) # gauss
+#plt.plot(x,  np.exp(-( p4[0] * np.power(x, 4) + p4[1] * np.power(x, 3) + p4[2] * np.power(x, 2) + p4[3] * x + p4[4] ) )) # gauss quad
 plt.show()
