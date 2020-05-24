@@ -5,7 +5,7 @@
             "column_mappings" : { 
                 "PROVINCE": "Province/State",
                 "REGION": "Country/Region",
-                "LAST_UPDATE": "Last Update",
+                "LAST_UPDATE": "ObservationDate",
                 "CONFIRMED": "Confirmed",
                 "RECOVERED": "Recovered",
                 "DEATH": "Deaths",
