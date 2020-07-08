@@ -8,3 +8,4 @@ sap-ui-cachebuster-info.json
 doc/*
 !doc/*.tex
 !doc/img
+.vscode/**

@@ -6,35 +6,28 @@ import matplotlib
 import math
 import matplotlib.pyplot as plt
 
+from dbconnect import dbconnect
+from dbselect import dbselect
+from Algorithms.LR import LR
+from Algorithms.ExpR import ExpR
+from Algorithms.GaussR import GaussR
 
-conn_data = {
-    'server' : 'oktnb132.inf.elte.hu',
-    'port': 30015,
-    'user': 'PY_TU',
-    'password': os.environ.get('PY_PASS')
-}
 
-conn = dbapi.connect(conn_data['server'], conn_data['port'], conn_data['user'], conn_data['password'])
+# Initialize connection
+conn = dbconnect()
 
-cursor = conn.cursor()
-#cursor.execute("select CURRENT_UTCTIMESTAMP from DUMMY", {})
-cursor.execute('select measure_ts, sum(confirmed) confirmed from "COVID_VISUAL_HDI_DB_1"."COVID_visual.db.data::COVIDTIMESERIES" where region like \'%China%\' group by measure_ts order by measure_ts;')
-res = cursor.fetchall()
-cursor.close()
-conn.close()
-
-dt = np.dtype(np.unicode_, 16)
-
-n = np.array([tuple(i) for i in res], np.dtype([
+# Initialize select and data type
+select = 'select measure_ts, sum(confirmed) confirmed from "ENVDUV_COVID_1"."COVID_visual.db.data::COVIDTIMESERIES" where region like \'%China%\' group by measure_ts order by measure_ts;'
+dt = np.dtype([
   ("f2", object),
   ("f1", "int32"),
-]))
+])
 
-#fig, ax = plt.subplots()
-#ax.plot(n["f2"], n["f1"])
+# Run query
+n = dbselect(conn, select, dt)
 
-#plt.show()
-
+# close connection
+conn.close()
 
 
 # Load/split your data
@@ -44,11 +37,6 @@ y2 = np.log(y)
 y3 = -y2
 #train, test = train_test_split(y, train_size=20)
 
-# Fit your model
-p1 = np.polyfit(x, y, 1) # for linear fitting
-p2 = np.polyfit(x, y2, 1) # for exponential fitting
-p3 = np.polyfit(x, y2, 2)
-p4 = np.polyfit(x, y2, 4)
 
 # Visualize the forecasts (blue=train, green=forecasts)
 #plt.plot(x, y2)
@@ -57,15 +45,15 @@ p4 = np.polyfit(x, y2, 4)
 #plt.show()
 
 
-plt.plot(x, y)
-x = np.arange(100) - 20
-plt.plot(x, p1[0] * x + p1[1]) # linear
-#plt.plot(x, math.exp(p2[1]) * np.exp(x * p2[0])) # exponential
+plt.plot(x,y)
 
-gc = p3[0]
-gb = -p3[1]/ (2*p3[0])
-ga = math.exp(p3[2] - p3[1] * p3[1] / (4 * p3[0]) )
+x2 = np.arange(10)
+#plt.plot(x2, LR(x, y, x2)) # linear
+#plt.plot(x2, ExpR(x, y, x2)) # exponential
+#plt.plot(x2, GaussR(x, y, x2)) # Gauss
+a = 0.00051
+plt.plot(x2, LR(x, np.exp(a * y), x2) )
+plt.plot(x2, np.log(LR(x, np.exp(a * y), x2)) / a)
 
-plt.plot(x, ga * np.exp(np.power(x - gb, 2) * gc )) # gauss
 #plt.plot(x,  np.exp(-( p4[0] * np.power(x, 4) + p4[1] * np.power(x, 3) + p4[2] * np.power(x, 2) + p4[3] * x + p4[4] ) )) # gauss quad
 plt.show()

@@ -3,7 +3,11 @@ import os
 
 from hdbcli import dbapi
 
-connection = dbapi.connect('oktnb132.inf.elte.hu', 30015, os.environ.get('PY_USER'), os.environ.get('PY_PASS'))
-
-#This statement prints true if the connection is successfully established
-print(connection.isconnected())
+def dbconnect():
+  conn_data = {
+    'server' : 'oktnb132.inf.elte.hu',
+    'port': 30015,
+    'user': 'PY_TU',
+    'password': os.environ.get('PY_PASS')
+  }
+  return dbapi.connect(conn_data['server'], conn_data['port'], conn_data['user'], conn_data['password'])
