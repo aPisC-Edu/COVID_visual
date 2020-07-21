@@ -7,7 +7,7 @@ import numpy as np
 def MA(x, y, x2):
   lag = 1;
   # fit model
-  model = ARMA(y, order=(2,1))
+  model = ARMA(y, order=(1,1))
   model_fit = model.fit(disp=False)
   # make prediction
   yhat = model_fit.predict(0, len(y) + len(x2) -1)
