@@ -1,0 +1,7 @@
+applications:
+ - name: pyapp
+   host: pyapp
+   path: .
+   command: python server.py	
+   services:
+    - ENVDUV-cb6znz6p8ij57f78-COVID_visual-hdi_db
