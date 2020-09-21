@@ -9,3 +9,6 @@ doc/*
 !doc/*.tex
 !doc/img
 .vscode/**
+__pycache__/
+.vscode
+
