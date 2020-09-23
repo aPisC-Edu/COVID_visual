@@ -1,3 +1,7 @@
 Flask==0.12.2
 cfenv==0.5.3
 hdbcli
+numpy
+statsmodels
+pymongo
+bson
